@@ -1,0 +1,6 @@
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.dll
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.pdb
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.AssemblyReference.cache
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.dll
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.pdb

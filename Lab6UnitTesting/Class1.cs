@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TagLib;
+using File = TagLib.File;
 
 namespace Lab5UnitTesting
 {
@@ -23,11 +26,11 @@ namespace Lab5UnitTesting
 
         public string album { get; set; }
 
-        public string artist { get; set; }
+        public string[] artists { get; set; }
 
-        public string genre { get; set; }
+        public string[] genres { get; set; }
 
-        public int durationSec { get; set; }
+        public string duration { get; set; }
 
         public Image coverArt { get; set; }
 
@@ -48,7 +51,7 @@ namespace Lab5UnitTesting
         public string description { get; set; }
     }
 
-    public class Image : Media
+    public class Picture : Media
     {
         public override string title { get; set; }
 
@@ -63,14 +66,82 @@ namespace Lab5UnitTesting
 
     public class MediaScanner
     {
-        ArrayList audio = new ArrayList();
-        ArrayList video = new ArrayList();
+        ArrayList audios = new ArrayList();
+        ArrayList videos = new ArrayList();
         ArrayList images = new ArrayList();
-
-        public bool scanMedia()
+        
+        /// <summary>
+        /// Scans for 
+        /// </summary>
+        /// <returns></returns>
+        public bool scanAudio()
         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            string[] fileTypes = { ".mp3", ".wav", ".flac", ".m4a", "ogg" };
+
+            try
+            {
+                string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
+                                 .Where(file => fileTypes.Contains(Path.GetExtension(file)))
+                                 .ToArray();
+                foreach (string filePath in files)
+                {
+                    File file = File.Create(filePath);
+                    Audio audio = new Audio();
+                    audio.title = file.Name;
+                    audio.fileLocation = filePath;
+                    audio.genres = file.Tag.Genres;
+                    audio.album = file.Tag.Album;
+                    audio.artists = file.Tag.Performers;
+                    audio.duration = file.Tag.Length;
+                    audio.coverArt = getCoverArt(file);
+                    audios.Add(audio);
+                }
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return false;
         }
 
+        public bool scanVideo()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
+            string[] fileTypes = { ".mp4", ".mkv", ".mov" };
+            try
+            {
+                string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
+                                 .Where(file => fileTypes.Contains(Path.GetExtension(file)))
+                                 .ToArray();
+                foreach (string file in files)
+                {
+                    Console.WriteLine(file);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return false;
+        }
+
+        public Image getCoverArt(File file)
+        {
+            IPicture pic = file.Tag.Pictures.Length > 0 ? file.Tag.Pictures[0] : null;
+            if (pic != null)
+            {
+                // Convert the picture data to an Image object
+                MemoryStream ms = new MemoryStream(pic.Data.Data);
+                Image image = Image.FromStream(ms);
+                return image;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
+
+
+
 }
