@@ -64,17 +64,17 @@ namespace Lab5UnitTesting
         public string description { get; set; }
     }
 
-    public class MediaScanner
+    public static class MediaScanner
     {
-        ArrayList audios = new ArrayList();
-        ArrayList videos = new ArrayList();
-        ArrayList images = new ArrayList();
+        static ArrayList audios = new ArrayList();
+        static ArrayList videos = new ArrayList();
+        static ArrayList images = new ArrayList();
         
         /// <summary>
         /// Scans for 
         /// </summary>
         /// <returns></returns>
-        public bool scanAudio()
+        public static bool scanAudio()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             string[] fileTypes = { ".mp3", ".wav", ".flac", ".m4a", "ogg" };
@@ -104,7 +104,7 @@ namespace Lab5UnitTesting
             return false;
         }
 
-        public bool scanVideo()
+        public static bool scanVideo()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
             string[] fileTypes = { ".mp4", ".mkv", ".mov" };
@@ -125,7 +125,7 @@ namespace Lab5UnitTesting
             return false;
         }
 
-        public Image getCoverArt(File file)
+        public static Image getCoverArt(File file)
         {
             IPicture pic = file.Tag.Pictures.Length > 0 ? file.Tag.Pictures[0] : null;
             if (pic != null)
