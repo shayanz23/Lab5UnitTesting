@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using TagLib;
 using File = TagLib.File;
 
-namespace Lab5UnitTesting
+namespace ClassLibraryMedia
 {
     public abstract class Media
     {
@@ -42,11 +42,11 @@ namespace Lab5UnitTesting
 
         public override string fileLocation { get; set; }
 
-        public string genre { get; set; }
+        public string[] genres { get; set; }
     
         public string director { get; set; }
 
-        public int durationSec { get; set; }
+        public string duration { get; set; }
 
         public string description { get; set; }
     }
@@ -66,10 +66,28 @@ namespace Lab5UnitTesting
 
     public static class MediaScanner
     {
-        static ArrayList audios = new ArrayList();
-        static ArrayList videos = new ArrayList();
-        static ArrayList images = new ArrayList();
-        
+        private static ArrayList _audios = new ArrayList();
+        private static ArrayList _videos = new ArrayList();
+        private static ArrayList _images = new ArrayList();
+
+        public static ArrayList Audios
+        {
+            get { return _audios; }
+            set { _audios = value; }
+        }
+
+        public static ArrayList Videos
+        {
+            get { return _videos; }
+            set { _videos = value; }
+        }
+
+        public static ArrayList Images
+        {
+            get { return _images; }
+            set { _images = value; }
+        }
+
         /// <summary>
         /// Scans for 
         /// </summary>
@@ -77,7 +95,7 @@ namespace Lab5UnitTesting
         public static bool scanAudio()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-            string[] fileTypes = { ".mp3", ".wav", ".flac", ".m4a", "ogg" };
+            string[] fileTypes = { ".mp3", ".wav", ".flac", ".m4a", ".ogg" };
 
             try
             {
@@ -88,41 +106,55 @@ namespace Lab5UnitTesting
                 {
                     File file = File.Create(filePath);
                     Audio audio = new Audio();
-                    audio.title = file.Name;
+                    audio.title = file.Tag.Title;
                     audio.fileLocation = filePath;
                     audio.genres = file.Tag.Genres;
                     audio.album = file.Tag.Album;
                     audio.artists = file.Tag.Performers;
                     audio.duration = file.Tag.Length;
                     audio.coverArt = getCoverArt(file);
-                    audios.Add(audio);
+                    _audios.Add(audio);
                 }
-            } catch(Exception ex)
+                return true;
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
             }
-            return false;
+
         }
 
         public static bool scanVideo()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
             string[] fileTypes = { ".mp4", ".mkv", ".mov" };
+
             try
             {
                 string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
                                  .Where(file => fileTypes.Contains(Path.GetExtension(file)))
                                  .ToArray();
-                foreach (string file in files)
+                foreach (string filePath in files)
                 {
-                    Console.WriteLine(file);
+                    File file = File.Create(filePath);
+
+                    Video video = new Video();
+                    video.title = file.Name;
+                    video.fileLocation = filePath;
+                    video.description = file.Tag.Description;
+                    video.title = file.Tag.Title;
+                    video.duration = file.Tag.Length;
+                    video.genres = file.Tag.Genres;
+                    _videos.Add(video);
                 }
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
             }
-            return false;
         }
 
         public static Image getCoverArt(File file)

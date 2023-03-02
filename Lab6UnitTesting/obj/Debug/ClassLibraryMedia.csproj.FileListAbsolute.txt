@@ -1,0 +1,10 @@
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\ClassLibraryMedia.csproj.AssemblyReference.cache
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\ClassLibraryMedia.csproj.CoreCompileInputs.cache
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.dll
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.pdb
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.dll
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.pdb
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\TagLibSharp.dll
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\TagLibSharp.pdb
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\TagLibSharp.xml
+C:\Users\Donkey\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\ClassLibraryMedia.csproj.CopyComplete
