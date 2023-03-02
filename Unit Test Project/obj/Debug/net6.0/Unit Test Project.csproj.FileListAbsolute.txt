@@ -1,0 +1,17 @@
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Unit Test Project.deps.json
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Unit Test Project.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Unit Test Project.pdb
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Lab6UnitTesting.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\AxInterop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Interop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\bin\Debug\net6.0\Lab6UnitTesting.pdb
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.csproj.AssemblyReference.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.AssemblyInfoInputs.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.AssemblyInfo.cs
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.csproj.CoreCompileInputs.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.csproj.CopyComplete
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\refint\Unit Test Project.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\Unit Test Project.pdb
+C:\Users\dmc\source\repos\Lab5UnitTesting\Unit Test Project\obj\Debug\net6.0\ref\Unit Test Project.dll

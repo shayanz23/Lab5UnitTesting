@@ -1,0 +1,13 @@
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Lab6UnitTesting.pdb
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\Interop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.AssemblyReference.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Interop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.ResolveComReference.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.Form1.resources
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.GenerateResource.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.csproj.CoreCompileInputs.cache
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.dll
+C:\Users\dmc\source\repos\Lab5UnitTesting\Lab6UnitTesting\obj\Debug\Lab6UnitTesting.pdb
